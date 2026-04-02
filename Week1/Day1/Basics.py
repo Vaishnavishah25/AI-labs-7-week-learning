@@ -1,4 +1,4 @@
-##date : 31/03/26
+##date : 1/04/26
 
 print("hello")
 print("world "*5)
@@ -95,3 +95,53 @@ my_list = list(my_set)
 print(my_list)
 print(type(my_list))#check type of my_list
 
+
+print("##loops")
+for i in range(5): #0 to 4
+    print(i)
+for i in range(1, 6):#1 to 5
+    print(i)
+for i in range(1, 10, 2):#1 to 9 with step 2
+    print(i)
+items = ["apple", "banana", "cherry"]#iterate through list
+for i in items:
+    print(i)
+
+list =[[1,2,3],[4,5,6],[7,8,9]]#iterate through nested list
+for i in list:
+    for j in i:
+        print(j)
+
+for i in range(8):
+    if i == 2:
+        continue #skip the rest of the loop when i is 2
+    if i == 4:
+        break #exit the loop when i is 4
+    print(i)
+
+i = int(input("Enter a number: "))
+if i > 0:
+    print("Positive number")
+elif i < 0:
+    print("Negative number")
+else:
+    print("Zero")
+
+
+print("##Strings")
+my_string = "Hello, World!"
+print(my_string)
+print(my_string[0:5])#slice string from index 0 to 4
+print(my_string[7:])#slice string from index 7 to end
+print(my_string[:5])#slice string from start to index 4
+print(my_string[-6:])#slice string from index -6 to end
+print(my_string[:-2])#slice string from start to index -3
+print(my_string[::2])#slice string with step 2
+print(len(my_string))#length of string
+print(my_string.capitalize())#capitalize first letter
+print(my_string.upper())#convert to uppercase
+print(my_string.lower())#convert to lowercase
+print(my_string.find("World"))#find index of substring
+print(my_string.find("Python"))#find index of substring that does not exist
+print(my_string.split(","))#split string by comma
+print(my_string.replace("World", "Python"))#replace substring
