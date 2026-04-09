@@ -1,0 +1,6 @@
+from fastapi import FastAPI
+app = FastAPI()
+@app.get("/hello")
+def hello():
+    return {"message": "Hello, World!"}
+## uvicorn main:app --reload (terminal command to run the FastAPI application, where main is the name of the Python file containing the code and app is the FastAPI instance)
