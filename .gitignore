@@ -1,0 +1,45 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# Google Colab temporary files
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Build files
+dist/
+build/
+
+# TensorFlow / PyTorch checkpoints
+*.h5
+*.ckpt
+*.pth
+
+# Large datasets
+datasets/
+data/
+
+# Kaggle API key
+kaggle.json
