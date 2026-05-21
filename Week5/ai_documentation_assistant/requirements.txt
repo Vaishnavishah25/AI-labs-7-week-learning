@@ -1,0 +1,31 @@
+# requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+# WHY EACH PACKAGE IS HERE:
+#
+#   langchain-core        → The abstract building blocks: Runnables, prompts,
+#                           messages, output parsers. Everything else builds on this.
+#
+#   langchain             → The main LangChain library. Contains chains, agents,
+#                           memory, and higher-level utilities.
+#
+#   langchain-ollama      → The official LangChain ↔ Ollama bridge.
+#                           Provides ChatOllama so LangChain can talk to your
+#                           local Ollama server over HTTP.
+#
+#   langchain-community   → Community-maintained integrations (vector stores,
+#                           loaders, tools). Not used heavily in this project
+#                           but needed for future RAG features.
+#
+#   pydantic              → Data validation library. We use BaseModel to define
+#                           the shape of our structured JSON output.
+#
+#   python-dotenv         → Reads key=value pairs from a .env file and injects
+#                           them into os.environ. Keeps secrets out of source code.
+# ─────────────────────────────────────────────────────────────────────────────
+
+langchain-core>=0.3.0
+langchain>=0.3.0
+langchain-ollama>=0.2.0
+langchain-community>=0.3.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0

@@ -1,0 +1,24 @@
+[
+  {
+    "topic": "RAG",
+    "technical_explanation": "RAG stands for Retrieval-Augmented Generation. It is a technique that improves the quality of AI-generated answers by first searching a knowledge base for relevant information, then handing that information to a language model so it can generate a more accurate, grounded response. Think of it like an open-book exam: instead of relying purely on memorised knowledge, the model is allowed to look things up before answering.",
+    "architecture_summary": "A RAG system has two main stages. First, an indexing stage: your documents are split into chunks, converted into numerical vectors (embeddings) by an embedding model, and stored in a vector database. Second, a retrieval-and-generation stage: when a user asks a question, the question is embedded in the same way, the vector database finds the most similar document chunks, and those chunks are injected into the LLM prompt as extra context before the model generates its final answer.",
+    "key_components": [
+      "Document Loader — reads files (PDF, web pages, etc.) into LangChain",
+      "Text Splitter — breaks documents into smaller, overlapping chunks",
+      "Embedding Model — converts text chunks into vectors (e.g., nomic-embed-text)",
+      "Vector Store — stores and queries embeddings (e.g., FAISS, Chroma)",
+      "Retriever — finds the top-k most relevant chunks for a given query",
+      "LLM — generates the final answer using retrieved context"
+    ],
+    "best_practices": [
+      "Choose chunk size carefully: 512–1024 tokens works for most documents",
+      "Add overlap between chunks (e.g., 50–100 tokens) so context is not cut off at boundaries",
+      "Use a dedicated embedding model (not your chat model) for better retrieval quality",
+      "Filter retrieved chunks with a similarity threshold to drop irrelevant results",
+      "Always cite the source documents in your final response for transparency",
+      "Re-rank retrieved results with a cross-encoder model for higher precision"
+    ],
+    "generated_at": "2025-09-01T14:32:10.123456"
+  }
+]
